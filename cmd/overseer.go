@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/alfianvitoanggoro/try-libs/test"
+	"github.com/alfianvitoanggoro/try-libs/libs"
 	"github.com/spf13/cobra"
 )
 
@@ -11,6 +11,6 @@ var overseerCmd = &cobra.Command{
 	Short: "overseer",
 	Long:  `running overseer using cobra`,
 	Run: func(cmd *cobra.Command, args []string) {
-		test.Overseer()
+		libs.Overseer()
 	},
 }

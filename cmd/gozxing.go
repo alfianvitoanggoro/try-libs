@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/alfianvitoanggoro/try-libs/test"
+	"github.com/alfianvitoanggoro/try-libs/libs"
 	"github.com/spf13/cobra"
 )
 
@@ -10,17 +10,17 @@ var gozxingCmd = &cobra.Command{
 	Short: "gozxing",
 	Long:  `running gozxing for qr-code and barcode using cobra`,
 	Run: func(cmd *cobra.Command, args []string) {
-		q := test.NewGozxing()
+		q := libs.NewGozxing()
 		switch {
 		default:
 			cmd.Help()
-		case test.DecodeQRCode:
+		case libs.DecodeQRCode:
 			q.DecodeQRCode()
-		case test.EncodeQRCode:
+		case libs.EncodeQRCode:
 			q.EncodeQRCode()
-		case test.DecodeBarcode:
+		case libs.DecodeBarcode:
 			q.DecodeBarcode()
-		case test.EncodeBarcode:
+		case libs.EncodeBarcode:
 			q.EncodeBarcode()
 		}
 	},
@@ -28,10 +28,10 @@ var gozxingCmd = &cobra.Command{
 
 func init() {
 	// ? QRCode
-	gozxingCmd.Flags().BoolVarP(&test.DecodeQRCode, "decode-qrcode", "q", false, "Execute for qr-code decode")
-	gozxingCmd.Flags().BoolVarP(&test.EncodeQRCode, "encode-qrcode", "r", false, "Execute for qr-code encode")
+	gozxingCmd.Flags().BoolVarP(&libs.DecodeQRCode, "decode-qrcode", "q", false, "Execute for qr-code decode")
+	gozxingCmd.Flags().BoolVarP(&libs.EncodeQRCode, "encode-qrcode", "r", false, "Execute for qr-code encode")
 
 	// ? Barcode
-	gozxingCmd.Flags().BoolVarP(&test.DecodeBarcode, "decode-barcode", "b", false, "Execute for barcode decode")
-	gozxingCmd.Flags().BoolVarP(&test.EncodeBarcode, "encode-barcode", "a", false, "Execute for barcode encode")
+	gozxingCmd.Flags().BoolVarP(&libs.DecodeBarcode, "decode-barcode", "b", false, "Execute for barcode decode")
+	gozxingCmd.Flags().BoolVarP(&libs.EncodeBarcode, "encode-barcode", "a", false, "Execute for barcode encode")
 }

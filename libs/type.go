@@ -1,4 +1,4 @@
-package test
+package libs
 
 // Struct matching the TOML structure
 type App struct {

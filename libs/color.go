@@ -1,4 +1,4 @@
-package test
+package libs
 
 import "github.com/fatih/color"
 

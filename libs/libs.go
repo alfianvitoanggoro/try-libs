@@ -1,6 +1,6 @@
-package test
+package libs
 
-func Test() {
+func Execute() {
 	// * Test change color text
 	// c := NewDebug("Hello world")
 	// c.Color()
