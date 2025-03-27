@@ -39,16 +39,10 @@ var greetCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(greetCmd, asynqCmd)
+	rootCmd.AddCommand(greetCmd)
 
 	greetCmd.Flags().StringVarP(&name, "name", "n", "", "Execute for get name")
 	greetCmd.Flags().BoolVarP(&status, "status", "s", false, "Execute for get status")
-
-	// asynqCmd
-	asynqCmd.Flags().BoolVarP(&asynqWorker, "worker", "w", false, "Execute for asynq worker")
-	asynqCmd.Flags().BoolVarP(&asynqSend, "send", "s", false, "Execute for asynq send")
-	asynqCmd.Flags().BoolVarP(&asynqSendDelayedJob, "delay", "d", false, "Execute for asynq send delayed job")
-	asynqCmd.Flags().BoolVarP(&asyncSendCronJob, "cron", "c", false, "Execute for asynq send cron job")
 }
 
 func Cobra() {

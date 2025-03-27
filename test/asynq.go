@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/hibiken/asynq"
-	"github.com/spf13/cobra"
 )
 
 // Struct untuk Asynq
@@ -126,31 +125,8 @@ func (a *Asynq) SendCronJob() {
 
 // Implement to cobra
 var (
-	asynqWorker         bool
-	asynqSend           bool
-	asynqSendDelayedJob bool
-	asyncSendCronJob    bool
+	Worker         bool
+	Send           bool
+	SendDelayedJob bool
+	SendCronJob    bool
 )
-
-// command
-var asynqCmd = &cobra.Command{
-	Use:   "asynq",
-	Short: "asynq",
-	Long:  `asynq for using cobra`,
-	Run: func(cmd *cobra.Command, args []string) {
-		a := NewAsynq()
-
-		switch {
-		default:
-			cmd.Help()
-		case asynqWorker:
-			a.Worker()
-		case asynqSend:
-			a.Send()
-		case asynqSendDelayedJob:
-			a.SendDelayedJob()
-		case asyncSendCronJob:
-			a.SendCronJob()
-		}
-	},
-}

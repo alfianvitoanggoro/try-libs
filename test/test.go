@@ -57,8 +57,8 @@ func Test() {
 	// * Test Asqynq for background job, task scheduler, cron job, delayed job and recuring job
 	// ? Run asynq worker with cobra command on asynqCmd
 	// TODO docker run --rm -p 5000:5000 hibiken/asynqmon --redis-addr=host.docker.internal:6379 --port=5000 // Run asynqmon GUI
-	// Cobra()
+	// Run with asynqCmd
 
 	// * Test Overseer for graceful restart dan zero-downtime updates pada aplikasi tanpa menghentikan proses utama.
-	Overseer()
+	// Overseer()
 }

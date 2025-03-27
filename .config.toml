@@ -1,0 +1,4 @@
+[app]
+name = "AVATECH-BE"
+version = "1.0.0"
+debug = true
