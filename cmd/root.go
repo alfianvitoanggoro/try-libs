@@ -12,6 +12,7 @@ func init() {
 	rootCmd.AddCommand(
 		asynqCmd,
 		overseerCmd,
+		gozxingCmd,
 	)
 }
 
