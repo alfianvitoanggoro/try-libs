@@ -13,6 +13,7 @@ func init() {
 		asynqCmd,
 		overseerCmd,
 		gozxingCmd,
+		msgpackCmd,
 	)
 }
 
